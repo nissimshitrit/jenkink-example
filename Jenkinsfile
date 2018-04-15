@@ -4,24 +4,19 @@ pipeline {
         maven 'apache-maven-3.0.5' 
     }
     stages {
-        stage ('Compile Stage') {
-
-            steps {                
-               sh 'mvn clean compile'                
+        stage('Compile stage') {
+            steps {
+                bat "mvn clean compile" 
             }
         }
-
-        stage ('Testing Stage') {
-
-            steps {               
-                sh 'mvn test'               
-            }
+        stage('testing stage') {
+             steps {
+                bat "mvn test"
+             }
         }
-
-
-        stage ('Deployment Stage') {
-            steps {                
-                    sh 'mvn deploy'                
+        stage('deployment stage') {
+            steps {
+                bat "mvn deploy"
             }
         }
     }
