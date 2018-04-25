@@ -7,7 +7,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {                
-                    bat 'mvn -B -verify'                
+                    bat 'mvn clean compile'                
             }
         }
 
