@@ -17,6 +17,12 @@ pipeline {
                     bat 'mvn test'                
             }
         }       
+        steps {
+                bat 'cd'
+                //bat 'mkdir reports'
+                bat 'xcopy /S ..\\..\\hpdevops-discovery-demoapp-master\\reports\\* reports'
+                bat 'sleep 2'
+        }
        
     }
     post {
