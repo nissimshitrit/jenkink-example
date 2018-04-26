@@ -16,13 +16,7 @@ pipeline {
             steps {                
                     bat 'mvn test'                
             }
-        }
-        stage ('server:Results'){
-            steps{
-                junit '**ui-tests-testng/target/surefire-reports/TEST-*.xml'
-                archive 'target/*.jar'            
-            }
-        }
+        }       
        
     }
 }
