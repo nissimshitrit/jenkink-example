@@ -32,7 +32,7 @@ class FizzBuzzTest {
         Assertions.assertEquals(fizzBuzz, "Buzz");
     }
 
-    @DisplayName("Don't Play FizzBuzz with number = 0")
+    @DisplayName("Don'ttt Play FizzBuzz with number = 0")
     @Test
     public void testZero() {
 
