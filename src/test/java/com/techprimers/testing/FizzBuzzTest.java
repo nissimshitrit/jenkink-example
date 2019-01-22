@@ -39,6 +39,13 @@ class FizzBuzzTest {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> fB.play(0));
     }
+    
+    @DisplayName("falied test")
+    @Test
+    public void failedTest() {
+        String fizzBuzz = fB.play(6);
+        Assertions.assertEquals(fizzBuzz, "Buzz");
+    }
 
     @AfterEach
     public void tearDown() {
