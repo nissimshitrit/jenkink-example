@@ -14,7 +14,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {                
-                    bat 'mvn test'                
+                    bat 'mvn -Dmaven.test.failure.ignore test'                
             }
         }
          stage('results') {
