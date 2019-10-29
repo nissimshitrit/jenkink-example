@@ -1,7 +1,7 @@
 pipeline {
     agent any    
     tools { 
-        maven 'mvn_305'         
+        maven 'maven-305'         
     }
     stages {
        
