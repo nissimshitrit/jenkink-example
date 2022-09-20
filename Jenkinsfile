@@ -1,5 +1,8 @@
 pipeline {
-    agent any    
+    agent {label 'master'}
+    tools {
+        maven 'mvn'
+    }
     stages {
         stage ('Compile Stage') {
 
@@ -11,13 +14,14 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {                
-                    bat 'mvn -Dmaven.test.failure.ignore test'                
+                    bat 'mvn test'                
             }
-        }
-         stage('results') {
-             steps {
-                junit '**/target/surefire-reports/TEST-*.xml'
-             }
-        }       
+        }        
+       
     }    
+    post {         
+         always {
+             junit '**/target/surefire-reports/TEST-*.xml'
+        }              
+    }
 }
