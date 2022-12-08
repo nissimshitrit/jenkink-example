@@ -16,7 +16,9 @@ pipeline {
             }
         }
         stage ('Starting ART job') {
-           build job: 'base-c'
+            steps {
+                build job: 'base-c'
+            }
         }
        
     }    
