@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven_3_5_0'
-    }
+    triggers {
+        cron('H/2 * * * *')
+    }   
     stages {
         stage ('Compile Stage') {
 
