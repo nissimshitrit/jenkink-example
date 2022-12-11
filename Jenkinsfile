@@ -15,11 +15,7 @@ pipeline {
                    bat 'mvn -Dmaven.test.failure.ignore test'         
             }
         }
-        stage ('Starting ART job') {
-            steps {
-                build job: 'base-c'
-            }
-        }
+
        
     }    
     post {         
